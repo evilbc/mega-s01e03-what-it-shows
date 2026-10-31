@@ -27,6 +27,25 @@ This new record proposes replacing it, not rewriting its history.
 The desk serves every product, not only `sched-prod`. A shared symptom such as
 "wrong date" does not establish a shared cause, within one product or across products.
 
+## Engineering update, 5 October 2026
+
+The support desk's engineering update on the
+[course challenge page](https://hq.mega.dev/challenges/what-it-shows), read on
+31 October 2026, says that original ticket #4471 closed on 5 October:
+
+- The parser is **fixed**, with the change subject
+  `fix(dates): parse dd/mm for eu locales`. Its
+  [tracking ticket #2](https://github.com/evilbc/mega-s01e03-what-it-shows/issues/2)
+  is closed as completed.
+- The hint is **won't fix** because the `booking-v3` form was retired. Its
+  [tracking ticket #1](https://github.com/evilbc/mega-s01e03-what-it-shows/issues/1)
+  is closed as not planned and labeled `wontfix`. Retirement is not a hint fix.
+
+The export predates this update. Counts, reproductions, and the original ticket
+assignments below describe that historical snapshot. Engineering supplied a fix
+subject, not a public patch or commit SHA. We record its stated result without
+claiming to have implemented or independently verified the production change.
+
 ## What #4471 contains
 
 These are computed from the deduplicated report IDs, the tenant directory, and the
@@ -103,12 +122,12 @@ Do not extend this date-specific classifier into a desk-wide rule.
 
 ## Follow-up and limits
 
-Split the hint reports out of the historical incident, link both technical tickets,
-and keep report IDs attached so future exports can update counts without double
-counting. Reproduce the timing anomalies before assigning their causes.
-Changing this documentation does not move reports in the support system or prove
-either fix shipped. A desk owner must accept the new triage decision before it
-becomes policy.
+The two tracking tickets record different closure outcomes, with the engineering
+update cited in each body. Keep report IDs attached so future exports can update
+counts without double counting. Reproduce the timing anomalies before assigning
+their causes; the parser fix's subject alone does not establish their resolution.
+Changing this documentation does not move reports in the support system.
+A desk owner must accept the new triage decision before it becomes policy.
 
 Sources are the original export's `reports-4471.json`, `desk-notes.json`, tenant
 JSON files, `causes.ts`, `locales.ts`, `CauseTable.svelte`, `QueueTimeline.svelte`,

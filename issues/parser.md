@@ -4,6 +4,14 @@
 
 Deduplicate the overlapping export by report ID before filtering `mergedInto === 4471`. The full export has 427 rows and 412 unique reports. Do not use intake tags as causes. This group's intake tags are parser: 356, hint: 23.
 
+## Resolution: fixed
+
+The support desk's engineering update says original ticket **#4471 closed on 2026-10-05**. The parser is **FIXED** by **`fix(dates): parse dd/mm for eu locales`**. Close this tracking ticket as completed.
+
+Source: the signed-in engineering update on https://hq.mega.dev/challenges/what-it-shows, read on 2026-10-31. The course gives the fix's subject, not a commit SHA or a public production patch. This repository records that engineering result; it did not implement the production fix.
+
+The reproduction and report counts below describe the historical export from 2026-10-04.
+
 The shared parser interprets dates month first, contrary to the day-first tenant's date convention. This is not the newer booking form's misleading hint.
 
 ## Reproduction and expected behavior

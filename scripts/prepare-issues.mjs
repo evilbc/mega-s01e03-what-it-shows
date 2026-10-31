@@ -55,6 +55,23 @@ The hint must agree with the date convention the form actually accepts. Fix and 
 The displayed date hint and actual form parser agree for day-first and month-first tenants. Following the hint preserves the selected date. Cover all three affected booking-v3 tenants and retain correct booking-v2 behavior. Keep the shared parser fix tracked separately.`
 };
 
+const resolutions = {
+  parser: `## Resolution: fixed
+
+The support desk's engineering update says original ticket **#4471 closed on 2026-10-05**. The parser is **FIXED** by **\`fix(dates): parse dd/mm for eu locales\`**. Close this tracking ticket as completed.
+
+Source: the signed-in engineering update on https://hq.mega.dev/challenges/what-it-shows, read on 2026-10-31. The course gives the fix's subject, not a commit SHA or a public production patch. This repository records that engineering result; it did not implement the production fix.
+
+The reproduction and report counts below describe the historical export from 2026-10-04.`,
+  hint: `## Resolution: won't fix
+
+The support desk's engineering update says original ticket **#4471 closed on 2026-10-05**. The hint problem is **WON'T FIX**, because **the booking-v3 form was retired**. No hint fix was shipped according to this update. Close this tracking ticket as not planned, with the \`wontfix\` label, rather than claiming the hint was fixed.
+
+Source: the signed-in engineering update on https://hq.mega.dev/challenges/what-it-shows, read on 2026-10-31. This is an explicit product-retirement decision, not a successful implementation of the historical acceptance criteria below.
+
+The reproduction and report counts below describe the historical export from 2026-10-04.`
+};
+
 await mkdir(new URL('issues/', root), { recursive: true });
 for (const group of groups) {
   if (!(group.cause in descriptions)) throw new Error(`Unplaced cause: ${group.cause}`);
@@ -63,6 +80,8 @@ for (const group of groups) {
 **${group.reports.length} unique reports** merged into original support ticket **#4471** belong to \`${group.cause}\` under the KB's tenant-aware classification. ${group.tenants} tenants. First received ${group.firstSeen}; last received ${group.lastSeen}.
 
 Deduplicate the overlapping export by report ID before filtering \`mergedInto === 4471\`. The full export has ${raw.length} rows and ${uniqueById(raw).length} unique reports. Do not use intake tags as causes. This group's intake tags are ${Object.entries(group.taggedAs).map(([tag, count]) => `${tag}: ${count}`).join(', ')}.
+
+${resolutions[group.cause]}
 
 ${descriptions[group.cause]}
 

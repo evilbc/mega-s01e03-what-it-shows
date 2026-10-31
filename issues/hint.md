@@ -4,6 +4,14 @@
 
 Deduplicate the overlapping export by report ID before filtering `mergedInto === 4471`. The full export has 427 rows and 412 unique reports. Do not use intake tags as causes. This group's intake tags are parser: 15, hint: 18.
 
+## Resolution: won't fix
+
+The support desk's engineering update says original ticket **#4471 closed on 2026-10-05**. The hint problem is **WON'T FIX**, because **the booking-v3 form was retired**. No hint fix was shipped according to this update. Close this tracking ticket as not planned, with the `wontfix` label, rather than claiming the hint was fixed.
+
+Source: the signed-in engineering update on https://hq.mega.dev/challenges/what-it-shows, read on 2026-10-31. This is an explicit product-retirement decision, not a successful implementation of the historical acceptance criteria below.
+
+The reproduction and report counts below describe the historical export from 2026-10-04.
+
 The booking-v3 date field prints `MM/DD/YYYY` for day-first tenants. People who follow that hint enter month first, but the form reads the tenant's day-first convention. This is distinct from the shared parser reading month first.
 
 ## Reproduction and expected behavior

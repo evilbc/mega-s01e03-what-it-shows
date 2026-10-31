@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../../../_app/immutable/entry/start.C-xdm8jO.js" rel="modulepreload">
+    <link href="../../../_app/immutable/entry/start.DfN2V8X-.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/ByUuLrCb.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/i4nbR0n3.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/CmGfroQe.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/XvFrH7I8.js" rel="modulepreload">
-		<link href="../../../_app/immutable/entry/app.BX1Kg2Y1.js" rel="modulepreload">
+		<link href="../../../_app/immutable/entry/app.CwZcqUDH.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CWlHc_WI.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/zxPRgVlz.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/Xh53pwKc.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/BPqopGI0.js" rel="modulepreload">
 		<link href="../../../_app/immutable/nodes/0.C3n-Godw.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CH6q6zMp.js" rel="modulepreload">
-		<link href="../../../_app/immutable/nodes/5.BP6WhBWR.js" rel="modulepreload">
-		<link href="../../../_app/immutable/chunks/TPf3X2-1.js" rel="modulepreload">
+		<link href="../../../_app/immutable/nodes/5.B7F_P3y6.js" rel="modulepreload">
+		<link href="../../../_app/immutable/chunks/Rsvr_ZD0.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CtVTSPNN.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/N9mx5q51.js" rel="modulepreload">
 		<link href="../../../_app/immutable/chunks/CzhhQIku.js" rel="modulepreload">
@@ -33,7 +33,11 @@ The <a href="/kb/triage/dedupe/">old triage page</a> says to merge matching subj
 reading bodies. Its live example disagrees with that instruction. The decision behind
 that rule was accepted on 11 June 2024. Keep <a href="/kb/decisions/0001-dedupe-by-subject/">decision 0001</a> unchanged as a historical record.
 This new record proposes replacing it, not rewriting its history.</p> <p>The desk serves every product, not only <code>sched-prod</code>. A shared symptom such as
-“wrong date” does not establish a shared cause, within one product or across products.</p> <h2>What #4471 contains</h2> <p>These are computed from the deduplicated report IDs, the tenant directory, and the
+“wrong date” does not establish a shared cause, within one product or across products.</p> <h2>Engineering update, 5 October 2026</h2> <p>The support desk’s engineering update on the <a href="https://hq.mega.dev/challenges/what-it-shows" rel="nofollow">course challenge page</a>, read on
+31 October 2026, says that original ticket #4471 closed on 5 October:</p> <ul><li>The parser is <strong>fixed</strong>, with the change subject <code>fix(dates): parse dd/mm for eu locales</code>. Its <a href="https://github.com/evilbc/mega-s01e03-what-it-shows/issues/2" rel="nofollow">tracking ticket #2</a> is closed as completed.</li> <li>The hint is <strong>won’t fix</strong> because the <code>booking-v3</code> form was retired. Its <a href="https://github.com/evilbc/mega-s01e03-what-it-shows/issues/1" rel="nofollow">tracking ticket #1</a> is closed as not planned and labeled <code>wontfix</code>. Retirement is not a hint fix.</li></ul> <p>The export predates this update. Counts, reproductions, and the original ticket
+assignments below describe that historical snapshot. Engineering supplied a fix
+subject, not a public patch or commit SHA. We record its stated result without
+claiming to have implemented or independently verified the production change.</p> <h2>What #4471 contains</h2> <p>These are computed from the deduplicated report IDs, the tenant directory, and the
 export’s <code>causeOf</code> function. Browser locale and <code>meta.intakeTag</code> are intake guesses,
 not the tenant’s date convention.</p> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <p>The original ticket contains two known mechanisms. The cause table describes the
 old ticket system: its warning that the hint problem has no ticket refers to that
@@ -67,26 +71,26 @@ Use browser locale and intake tags as clues, never as the final classification.<
 the same cause. Unknown tenants and unexplained behavior stay separate for
 investigation rather than being merged by default.</p> <div class="try svelte-gq0h2h"><!--[--><fieldset class="svelte-gq0h2h"><legend>report A</legend> <select aria-label="tenant"><!--[--><option selected="">alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option>kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>hint</code></fieldset><fieldset class="svelte-gq0h2h"><legend>report B</legend> <select aria-label="tenant"><!--[--><option>alder.physio</option><option>copper.studio</option><option>harbour.dental</option><option selected="">kettle.books</option><option>lantern.row</option><option>long.table</option><option>morrow.tax</option><option>nine.lanterns</option><option>pale.harbour</option><option>ridge.clinic</option><option>stone.and.sons</option><!--]--></select> <select aria-label="channel"><!--[--><option>app</option><option>email</option><option selected="">form</option><!--]--></select> <input value="Booking on the wrong date" aria-label="subject"/> <code>parser</code></fieldset><!--]--> <p class="verdict svelte-gq0h2h">different causes — keep apart</p></div> <table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody><!--[--><tr><td>app vs email, same tenant</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>same subject, same tenant, different channel</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>same subject, same channel, different tenant</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><tr><td>different subject, same way in</td><td>no</td><td class="svelte-gq0h2h dup">yes</td></tr><tr><td>no tenant on file</td><td>yes</td><td class="svelte-gq0h2h">no</td></tr><!--]--></tbody></table><!----> <p>The explorer evaluates the two known date causes, not every possible product
 failure. For unknown tenants it returns no cause and refuses to call them duplicates.
-Do not extend this date-specific classifier into a desk-wide rule.</p> <h2>Follow-up and limits</h2> <p>Split the hint reports out of the historical incident, link both technical tickets,
-and keep report IDs attached so future exports can update counts without double
-counting. Reproduce the timing anomalies before assigning their causes.
-Changing this documentation does not move reports in the support system or prove
-either fix shipped. A desk owner must accept the new triage decision before it
-becomes policy.</p> <p>Sources are the original export’s <code>reports-4471.json</code>, <code>desk-notes.json</code>, tenant
+Do not extend this date-specific classifier into a desk-wide rule.</p> <h2>Follow-up and limits</h2> <p>The two tracking tickets record different closure outcomes, with the engineering
+update cited in each body. Keep report IDs attached so future exports can update
+counts without double counting. Reproduce the timing anomalies before assigning
+their causes; the parser fix’s subject alone does not establish their resolution.
+Changing this documentation does not move reports in the support system.
+A desk owner must accept the new triage decision before it becomes policy.</p> <p>Sources are the original export’s <code>reports-4471.json</code>, <code>desk-notes.json</code>, tenant
 JSON files, <code>causes.ts</code>, <code>locales.ts</code>, <code>CauseTable.svelte</code>, <code>QueueTimeline.svelte</code>,
 and <code>DedupeExplorer.svelte</code>. All remain in this repository.</p> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-XSE4-YW0C</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1pqlyra = {
+					__sveltekit_1we64t5 = {
 						base: new URL("../../..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../../../_app/immutable/entry/start.C-xdm8jO.js"),
-						import("../../../_app/immutable/entry/app.BX1Kg2Y1.js")
+						import("../../../_app/immutable/entry/start.DfN2V8X-.js"),
+						import("../../../_app/immutable/entry/app.CwZcqUDH.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
