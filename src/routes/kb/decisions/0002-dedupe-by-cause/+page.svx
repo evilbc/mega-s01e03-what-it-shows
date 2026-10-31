@@ -4,7 +4,7 @@ title: '0002: Split #4471 and deduplicate by cause'
 owner: evilbc and GitHub Copilot
 status: proposed
 reviewed: '2026-10-31'
-signature: 'evilbc + GitHub Copilot, S01E03'
+signature: 'v1.eyJzdWIiOiIyODg5IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM0Mzc1NzksImV4cCI6MTc5MzUyMzk3OX0.mk2j4qIOP9-M1c6MngSDVPU63DBG7Bhx_EP35nN8jAY'
 ---
 
 <script>

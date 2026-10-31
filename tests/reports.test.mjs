@@ -58,8 +58,11 @@ test('timing anomalies remain visible without inventing their root cause', async
   }
 });
 
-test('desk reference derives from the exact signature', () => {
-  const signature = 'evilbc + GitHub Copilot, S01E03';
+test('desk reference derives from the exact course-issued page signature', async () => {
+  const source = await readFile(new URL('../src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx', import.meta.url), 'utf8');
+  const signature = source.match(/^signature: '([^']+)'$/m)?.[1];
+  assert.ok(signature);
+  assert.ok(signature.startsWith('v1.'));
   assert.match(deskRef(signature), /^DR-[0-9A-HJKMNP-TV-Z]{4}-[0-9A-HJKMNP-TV-Z]{4}$/);
   assert.equal(deskRef(` ${signature} `), deskRef(signature));
   assert.notEqual(deskRef('unsigned'), deskRef(signature));
